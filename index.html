@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aditya Nur Huda's Portfolio</title>
+    <link href="dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<!-- :class="{'translate-x-22': sidebarOpen === true, '-translate-x-44': sidebarOpen === false}" -->
+
+<body class="bg-blue-200" x-data="{ sidebarOpen: false }">
+
+    <div class="fixed top-2 left-5 z-30 transform-none">
+        <button @click="sidebarOpen = !sidebarOpen" class="text-blue-500 text-3xl">
+            <i :class="{'fa-solid fa-x': sidebarOpen === true, 'fa-solid fa-bars': sidebarOpen === false}"></i>
+        </button>
+    </div>
+    <nav :class="{'translate-x-22': sidebarOpen === true, '-translate-x-44': sidebarOpen === false}"
+        class="w-60 z-20 fixed bg-blue-200 border-blue-500 border-r-2 transform transition duration-30 flex items-center h-screen"
+        aria-label="Sidebar">
+        <div class="py-4 px-3 rounded align-middle">
+            <ul class="space-y-2">
+                <li>
+                    <a href="#"
+                        class="group flex items-center p-2 text-xl font-normal transform hover:translate-x-6 transition text-blue-500 rounded-lg">
+                        <span class="hidden group-hover:block">-</span>
+                        <span class="ml-3">About me</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="group flex items-center p-2 text-xl font-normal transform hover:translate-x-6 transition text-blue-500 rounded-lg">
+                        <span class="hidden group-hover:block">-</span>
+                        <span class="ml-3">Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="group flex items-center p-2 text-xl font-normal transform hover:translate-x-6 transition text-blue-500 rounded-lg">
+                        <span class="hidden group-hover:block">-</span>
+                        <span class="ml-3">Contact</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="absolute bottom-4 right-4 text-2xl text-blue-500">
+                <li><a href="#"><i class="fa-brands fa-linkedin transition hover:scale-150"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram transition hover:scale-150"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter transition hover:scale-150"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="fixed w-full z-10 bg-blue-200 border-blue-500 border-b-2 pl-32 rounded dark:bg-gray-800">
+        <div class="container flex justify-between">
+            <a href="https://flowbite.com" class="flex items-center">
+                <span class="self-center text-xl whitespace-nowrap text-blue-500">Aditya Nur Huda</span>
+            </a>
+            <a href="#" class="bg-blue-500 p-6 text-blue-200 hover:bg-blue-300">
+                Contact
+            </a>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+
+        <div class="flex border-b-2 border-blue-500">
+
+            <div class="w-full pl-36 pt-16 pr-36 border-r-2 border-blue-500 pb-20">
+                <div class="w-60">
+                    <h2 class="text-7xl font-black text-blue-500">Junior <span
+                            class="text-blue-200 drop-shadow-2lg z-0">Software Engineer</span></h2>
+                </div>
+                <div class="max-w-xl pt-12">
+                    <p class="text-blue-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae
+                        excepturi itaque sequi nobis. Iste, architecto autem dolor deleniti aliquid quis, dolore,
+                        dolores fuga debitis illum consequuntur unde ipsam non voluptas. Incidunt velit dolorum
+                        asperiores distinctio dolor sapiente, repellendus quisquam magnam, ea quam aliquid cumque
+                        maiores? Voluptas placeat aliquam eligendi eius.</p>
+                </div>
+            </div>
+            <div class="w-2/3 max-h-552 px-32 overflow-hidden">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper max-h-552">
+                        <div class="swiper-slide flex flex-wrap justify-between">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="120" height="120"
+                                class="fill-blue-500" viewBox="0 0 30 30">
+                                <path
+                                    d="M25.428,3.333C25.238,3.121,24.967,3,24.683,3H5.317C5.033,3,4.762,3.121,4.572,3.333c-0.19,0.212-0.28,0.495-0.249,0.777 l2.202,19.823c0.044,0.403,0.329,0.74,0.719,0.851l7.48,2.137c0.09,0.026,0.183,0.039,0.275,0.039s0.185-0.013,0.275-0.039 l7.48-2.137c0.39-0.111,0.674-0.448,0.719-0.851L25.676,4.11C25.708,3.828,25.618,3.545,25.428,3.333z M20.629,10.43h-8.93 l0.212,2.542h8.503l-0.638,7.51L15.003,22l-0.047-0.015l-4.72-1.505L9.978,17.42h2.312l0.101,1.189l2.637,0.581l2.591-0.582 l0.275-3.213h-8.09L9.178,8h11.659L20.629,10.43z">
+                                </path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="120" height="120"
+                                class="fill-blue-500" viewBox="0 0 30 30">
+                                <path
+                                    d="M25.428,3.333C25.238,3.121,24.967,3,24.683,3H5.317C5.033,3,4.762,3.121,4.572,3.333c-0.19,0.212-0.28,0.495-0.249,0.777 l2.202,19.823c0.044,0.403,0.329,0.74,0.719,0.851l7.48,2.137c0.09,0.026,0.183,0.039,0.275,0.039s0.185-0.013,0.275-0.039 l7.48-2.137c0.39-0.111,0.674-0.448,0.719-0.851L25.676,4.11C25.708,3.828,25.618,3.545,25.428,3.333z M20.516,13.074l-0.446,7.285 l-5.038,1.647l-5.038-1.647l-0.191-3.484h2.55l0.064,1.584l2.615,0.887l2.615-0.887l0.191-2.85h-5.612l-0.127-2.534h5.867 l0.191-2.534H9.356L9.165,8.006h11.67L20.516,13.074z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="swiper-slide flex flex-wrap justify-between">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="120" height="120"
+                                viewBox="0 0 30 30" class="fill-blue-500">
+                                <path
+                                    d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M15,20.38 c0,1.777-1.09,2.773-2.9,2.773c-1.788,0-2.927-1.045-2.927-2.735h1.937c0.005,0.627,0.379,1.023,0.957,1.023 c0.594,0,0.913-0.374,0.913-1.078v-5.365H15V20.38z M20.481,23.153c-2.009,0-3.273-0.946-3.307-2.476H19.1 c0.049,0.578,0.626,0.946,1.463,0.946c0.754,0,1.272-0.363,1.272-0.886c0-0.44-0.347-0.677-1.255-0.858l-1.045-0.209 c-1.453-0.275-2.201-1.067-2.201-2.316c0-1.552,1.244-2.57,3.158-2.57c1.86,0,3.147,1.007,3.18,2.476h-1.865 c-0.044-0.561-0.578-0.952-1.289-0.952c-0.709,0-1.176,0.336-1.176,0.864c0,0.435,0.352,0.688,1.188,0.853l1.022,0.198 c1.569,0.303,2.273,1.012,2.273,2.272C23.826,22.152,22.561,23.153,20.481,23.153z">
+                                </path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="150" height="150"
+                                viewBox="0 0 50 50" class="fill-blue-500">
+                                <path
+                                    d="M 25 12 C 18.507813 12 12.621094 13.359375 8.273438 15.628906 C 3.925781 17.898438 1 21.167969 1 25 C 1 28.832031 3.925781 32.101563 8.273438 34.371094 C 12.621094 36.640625 18.507813 38 25 38 C 31.492188 38 37.378906 36.640625 41.726563 34.371094 C 46.074219 32.101563 49 28.832031 49 25 C 49 21.167969 46.074219 17.898438 41.726563 15.628906 C 37.378906 13.359375 31.492188 12 25 12 Z M 25 14 C 31.210938 14 36.824219 15.324219 40.800781 17.402344 C 44.777344 19.476563 47 22.203125 47 25 C 47 27.796875 44.777344 30.523438 40.800781 32.597656 C 36.824219 34.675781 31.210938 36 25 36 C 18.789063 36 13.175781 34.675781 9.199219 32.597656 C 5.222656 30.523438 3 27.796875 3 25 C 3 22.203125 5.222656 19.476563 9.199219 17.402344 C 13.175781 15.324219 18.789063 14 25 14 Z M 22.507813 16 L 20 28 L 22.625 28 L 23.890625 22 L 25.988281 22 C 26.65625 22 27.101563 22.109375 27.308594 22.332031 C 27.511719 22.554688 27.554688 22.976563 27.4375 23.582031 L 26.480469 28 L 29.144531 28 L 30.183594 23.222656 C 30.40625 22.078125 30.238281 21.238281 29.683594 20.726563 C 29.117188 20.207031 28.121094 20 26.636719 20 L 24.296875 20 L 25.128906 16 Z M 11 20 L 8.972656 31 L 11.617188 31 L 12.144531 28 L 13.792969 28 C 17.238281 28 19.113281 27.203125 19.8125 24.246094 C 20.414063 21.703125 18.875 20 16.332031 20 Z M 32 20 L 29.972656 31 L 32.617188 31 L 33.144531 28 L 34.792969 28 C 38.238281 28 40.113281 27.203125 40.8125 24.246094 C 41.414063 21.703125 39.875 20 37.332031 20 Z M 13.273438 22 L 15.332031 22 C 17.042969 22 17.402344 22.769531 17.3125 23.625 C 17.082031 25.832031 15.707031 26 14.230469 26 L 12.515625 26 Z M 34.273438 22 L 36.332031 22 C 38.042969 22 38.402344 22.769531 38.3125 23.625 C 38.082031 25.832031 36.707031 26 35.230469 26 L 33.515625 26 Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="swiper-slide flex flex-wrap justify-between">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="120"
+                                class="hue-rotate-20" height="120" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32">
+                                <path fill="#44a8b3"
+                                    d="M9 13.7q1.4-5.6 7-5.6c5.6 0 6.3 4.2 9.1 4.9q2.8.7 4.9-2.1q-1.4 5.6-7 5.6c-5.6 0-6.3-4.2-9.1-4.9q-2.8-.7-4.9 2.1Zm-7 8.4q1.4-5.6 7-5.6c5.6 0 6.3 4.2 9.1 4.9q2.8.7 4.9-2.1q-1.4 5.6-7 5.6c-5.6 0-6.3-4.2-9.1-4.9q-2.8-.7-4.9 2.1Z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="120" height="120"
+                                viewBox="0 0 50 50" class="fill-blue-500">
+                                <path
+                                    d="M 25 2 C 24.285156 2 23.570313 2.179688 22.933594 2.539063 L 6.089844 12.003906 C 4.800781 12.726563 4 14.082031 4 15.535156 L 4 34.464844 C 4 35.917969 4.800781 37.273438 6.089844 37.996094 L 22.933594 47.460938 C 23.570313 47.820313 24.285156 48 25 48 C 25.714844 48 26.429688 47.820313 27.066406 47.460938 L 43.910156 38 C 45.199219 37.273438 46 35.917969 46 34.464844 L 46 15.535156 C 46 14.082031 45.199219 12.726563 43.910156 12.003906 L 27.066406 2.539063 C 26.429688 2.179688 25.714844 2 25 2 Z M 25 13 C 28.78125 13 32.277344 14.753906 34.542969 17.738281 L 30.160156 20.277344 C 28.84375 18.835938 26.972656 18 25 18 C 21.140625 18 18 21.140625 18 25 C 18 28.859375 21.140625 32 25 32 C 26.972656 32 28.84375 31.164063 30.160156 29.722656 L 34.542969 32.261719 C 32.277344 35.246094 28.78125 37 25 37 C 18.382813 37 13 31.617188 13 25 C 13 18.382813 18.382813 13 25 13 Z M 35 20 L 37 20 L 37 22 L 39 22 L 39 20 L 41 20 L 41 22 L 43 22 L 43 24 L 41 24 L 41 26 L 43 26 L 43 28 L 41 28 L 41 30 L 39 30 L 39 28 L 37 28 L 37 30 L 35 30 L 35 28 L 33 28 L 33 26 L 35 26 L 35 24 L 33 24 L 33 22 L 35 22 Z M 37 24 L 37 26 L 39 26 L 39 24 Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="swiper-slide flex flex-wrap justify-between">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="120" height="120"
+                                viewBox="0 0 50 50" class="fill-blue-500">
+                                <path
+                                    d="M 28.1875 0 C 30.9375 6.363281 18.328125 10.292969 17.15625 15.59375 C 16.082031 20.464844 24.648438 26.125 24.65625 26.125 C 23.355469 24.109375 22.398438 22.449219 21.09375 19.3125 C 18.886719 14.007813 34.535156 9.207031 28.1875 0 Z M 36.5625 8.8125 C 36.5625 8.8125 25.5 9.523438 24.9375 16.59375 C 24.6875 19.742188 27.847656 21.398438 27.9375 23.6875 C 28.011719 25.558594 26.0625 27.125 26.0625 27.125 C 26.0625 27.125 29.609375 26.449219 30.71875 23.59375 C 31.949219 20.425781 28.320313 18.285156 28.6875 15.75 C 29.039063 13.324219 36.5625 8.8125 36.5625 8.8125 Z M 19.1875 25.15625 C 19.1875 25.15625 9.0625 25.011719 9.0625 27.875 C 9.0625 30.867188 22.316406 31.089844 31.78125 29.25 C 31.78125 29.25 34.296875 27.519531 34.96875 26.875 C 28.765625 28.140625 14.625 28.28125 14.625 27.1875 C 14.625 26.179688 19.1875 25.15625 19.1875 25.15625 Z M 38.65625 25.15625 C 37.664063 25.234375 36.59375 25.617188 35.625 26.3125 C 37.90625 25.820313 39.84375 27.234375 39.84375 28.84375 C 39.84375 32.46875 34.59375 35.875 34.59375 35.875 C 34.59375 35.875 42.71875 34.953125 42.71875 29 C 42.71875 26.296875 40.839844 24.984375 38.65625 25.15625 Z M 16.75 30.71875 C 15.195313 30.71875 12.875 31.9375 12.875 33.09375 C 12.875 35.417969 24.5625 37.207031 33.21875 33.8125 L 30.21875 31.96875 C 24.351563 33.847656 13.546875 33.234375 16.75 30.71875 Z M 18.1875 35.9375 C 16.058594 35.9375 14.65625 37.222656 14.65625 38.1875 C 14.65625 41.171875 27.371094 41.472656 32.40625 38.4375 L 29.21875 36.40625 C 25.457031 37.996094 16.015625 38.238281 18.1875 35.9375 Z M 11.09375 38.625 C 7.625 38.554688 5.375 40.113281 5.375 41.40625 C 5.375 48.28125 40.875 47.964844 40.875 40.9375 C 40.875 39.769531 39.527344 39.203125 39.03125 38.9375 C 41.933594 45.65625 9.96875 45.121094 9.96875 41.15625 C 9.96875 40.253906 12.320313 39.390625 14.5 39.8125 L 12.65625 38.75 C 12.113281 38.667969 11.589844 38.636719 11.09375 38.625 Z M 44.625 43.25 C 39.226563 48.367188 25.546875 50.222656 11.78125 47.0625 C 25.542969 52.695313 44.558594 49.535156 44.625 43.25 Z">
+                                </path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="120" height="120"
+                                viewBox="0 0 48 48" class="fill-blue-500">
+                                <path fill="#1565c0"
+                                    d="M10,12l3,25l-8.019-8.019c-1.189-1.189-1.508-2.996-0.796-4.52L10,12z"></path>
+                                <path fill="#42a5f5"
+                                    d="M27.319,6.319C26.474,5.474,25.329,5,24.135,5c-0.745,0-1.479,0.185-2.135,0.538L10,12v20.343 c0,1.061,0.421,2.078,1.172,2.828L13,37h22v-5l7-11L27.319,6.319z">
+                                </path>
+                                <path fill="#1565c0"
+                                    d="M10,12h21.343c1.061,0,2.078,0.421,2.828,1.172L42,21v16h-7L10,12z">
+                                </path>
+                                <polygon fill="#85cbf8" points="35,37 13,37 19,43 35,43"></polygon>
+                            </svg>
+                        </div>
+                        <div class="swiper-slide flex flex-wrap justify-between">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="120" height="120"
+                                viewBox="0 0 30 30" class="fill-blue-500">
+                                <path
+                                    d="M 13 3 C 10.791 3 9 4.791 9 7 L 9 8 L 14 8 C 14.552 8 15 8.448 15 9 C 15 9.552 14.552 10 14 10 L 9 10 L 8 10 L 7 10 C 4.791 10 3 11.791 3 14 L 3 18 C 3 20.209 4.791 22 7 22 L 8 22 L 8 17 C 8 15.346 9.346 14 11 14 L 19 14 C 19.552 14 20 13.552 20 13 L 20 7 C 20 4.791 18.209 3 16 3 L 13 3 z M 12 5 C 12.552 5 13 5.448 13 6 C 13 6.552 12.552 7 12 7 C 11.448 7 11 6.552 11 6 C 11 5.448 11.448 5 12 5 z M 22 8 L 22 13 C 22 14.654 20.654 16 19 16 L 11 16 C 10.448 16 10 16.448 10 17 L 10 23 C 10 25.209 11.791 27 14 27 L 17 27 C 19.209 27 21 25.209 21 23 L 21 22 L 16 22 C 15.448 22 15 21.552 15 21 C 15 20.448 15.448 20 16 20 L 21 20 L 22 20 L 23 20 C 25.209 20 27 18.209 27 16 L 27 12 C 27 9.791 25.209 8 23 8 L 22 8 z M 18 23 C 18.552 23 19 23.448 19 24 C 19 24.552 18.552 25 18 25 C 17.448 25 17 24.552 17 24 C 17 23.448 17.448 23 18 23 z">
+                                </path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="120" height="120"
+                                viewBox="0 0 50 50" class="fill-blue-500">
+                                <path
+                                    d="M 44.082031 25.207031 L 46.902344 20.429688 C 47.015625 20.191406 47.03125 19.917969 46.945313 19.671875 L 41.359375 3.671875 C 41.1875 3.183594 40.675781 2.90625 40.179688 3.027344 L 23.761719 7.027344 C 23.449219 7.105469 23.191406 7.328125 23.070313 7.628906 L 21.324219 12 L 16 12 C 15.722656 12 15.453125 12.117188 15.265625 12.320313 L 3.265625 25.320313 C 2.894531 25.722656 2.914063 26.347656 3.308594 26.722656 L 15.894531 38.722656 C 16.078125 38.902344 16.328125 39 16.582031 39 L 22.320313 39 L 24.070313 43.371094 C 24.199219 43.695313 24.488281 43.925781 24.828125 43.984375 L 42.289063 46.984375 C 42.34375 46.996094 42.402344 47 42.457031 47 C 42.921875 47 43.332031 46.679688 43.433594 46.214844 L 46.976563 29.984375 C 47.03125 29.734375 46.988281 29.472656 46.851563 29.25 Z M 21.324219 12 L 35.417969 9.417969 L 28 24 L 11.167969 24 Z M 22.324219 39 L 11.167969 28 L 28 28 L 36.75 41.167969 Z M 40.386719 38.898438 L 32 26 L 39.332031 11.417969 L 44.082031 25.210938 Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="swiper-slide flex flex-wrap justify-between">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="120" height="120"
+                                viewBox="0 0 50 50" class="fill-blue-500">
+                                <path
+                                    d="M 27 3 A 1.0001 1.0001 0 0 0 26.292969 3.2929688 L 5.2929688 24.292969 A 1.0001 1.0001 0 0 0 5.2929688 25.707031 L 11.292969 31.707031 A 1.0001 1.0001 0 0 0 12.707031 31.707031 L 39.707031 4.7070312 A 1.0001 1.0001 0 0 0 39 3 L 27 3 z M 27.414062 5 L 36.585938 5 L 12 29.585938 L 7.4140625 25 L 27.414062 5 z M 28 22 A 1.0001 1.0001 0 0 0 27.292969 22.292969 L 15.292969 34.292969 A 1.0001 1.0001 0 0 0 15.292969 35.707031 L 21.292969 41.707031 L 27.292969 47.707031 A 1.0001 1.0001 0 0 0 28 48 L 40 48 A 1.0001 1.0001 0 0 0 40.707031 46.292969 L 29.414062 35 L 40.707031 23.707031 A 1.0001 1.0001 0 0 0 40 22 L 28 22 z M 28.414062 24 L 37.585938 24 L 22 39.585938 L 17.414062 35 L 28.414062 24 z M 28 36.414062 L 37.585938 46 L 28.414062 46 L 23.414062 41 L 28 36.414062 z">
+                                </path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="120" height="120"
+                                viewBox="0 0 32 32" class="fill-blue-500">
+                                <path
+                                    d="M 5 5 L 5 27 L 27 27 L 27 5 L 5 5 z M 7 7 L 25 7 L 25 25 L 7 25 L 7 7 z M 11 10 L 11 15.509766 L 11 21.990234 C 16.93 21.990234 18.116563 22.070234 19.226562 21.740234 C 19.876562 21.540234 21.65625 20.900391 21.65625 18.650391 C 21.65625 17.650391 21.356484 15.959062 19.396484 15.539062 L 19.396484 15.509766 L 19.027344 15.509766 C 20.027344 15.059766 20.65625 14.210937 20.65625 12.960938 C 20.65625 12.640937 20.746094 10 17.246094 10 L 11 10 z M 13 12 L 17 12 C 18.509 12 18.65625 12.853234 18.65625 13.490234 C 18.65625 15.044234 17.03 15 17 15 L 13 15 L 13 12 z M 13 17 L 17.759766 17 C 19.620766 17 19.65625 18.176469 19.65625 18.480469 C 19.65625 20.040469 18.044609 20 17.849609 20 L 13 20 L 13 17 z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="swiper-slide flex flex-wrap justify-between">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="120"
+                                class="-hue-rotate-160" height="120" preserveAspectRatio="xMidYMid meet"
+                                viewBox="0 0 256 304">
+                                <rect x="0" y="0" width="256" height="304" fill="none" stroke="none" />
+                                <path fill="#EE4323"
+                                    d="M13.104 287.306c-5.204 0-6.717-3.03-6.717-7.57c0-1.513.19-3.22.424-5.018c1.14-7.851 3.923-12.343 10.64-12.343c4.543 0 6.758 2.032 6.758 5.722v1.799h4.507c.05 0 .05-1.656.05-2.033c0-5.392-3.265-10.506-11.308-10.506c-10.929 0-15.423 5.937-17.079 17.576c-.237 1.562-.379 3.02-.379 4.576c0 6.86 2.699 13.1 12.349 13.1c7.332 0 11.687-3.575 14.24-7.975l-4.306-2.9c-2.79 4.401-5.82 5.572-9.179 5.572Zm29.57-21.668c-8.754 0-12.536 4.492-13.813 13.432a23.325 23.325 0 0 0-.24 3.124c0 5.77 2.697 10.362 10.17 10.362c8.754 0 12.587-4.685 13.864-13.486c.142-1.134.237-2.175.237-3.215c.002-5.865-2.788-10.217-10.218-10.217Zm3.643 13.435c-.947 6.483-2.979 8.47-6.814 8.47c-3.073 0-4.586-1.278-4.586-5.11c0-.947.096-2.081.284-3.36c.947-6.433 2.839-8.42 6.718-8.42c3.123 0 4.682 1.277 4.682 5.156c0 .946-.096 2.035-.284 3.264Zm28.58-21.246l-1.465 8.685c-.094.755-.046.504.24 1.214c-1.372-1.04-3.834-1.728-5.49-1.728c-7.854 0-12.252 3.555-13.67 13.49a19.414 19.414 0 0 0-.237 3.171c0 7.241 4.257 9.94 9.98 9.94c2.416 0 4.78.05 6.623-1.509l.471 2.943h4.543l5.298-36.206h-6.293Zm-4.494 28.342c-2.127 1.274-4.207 1.562-5.484 1.562c-3.454 0-4.4-1.799-4.4-4.683c0-1.089.142-2.363.333-3.739c1.086-7.521 3.5-8.848 6.623-8.848c2.032 0 3.592.333 5.062 1.139l-2.134 14.569Zm24.603-20.531c-8.66 0-12.725 4.113-14.099 13.432c-.144 1.137-.239 2.226-.239 3.266c0 6.387 3.266 10.22 10.454 10.22c5.583 0 9.75-2.32 11.972-6.578l-4.779-1.94c-1.37 2.08-3.215 3.5-6.48 3.5c-3.5 0-4.92-.942-4.92-4.065c0-.616.048-1.511.143-1.511h17.076c.24-2.414.52-4.12.52-5.535c0-4.728-1.796-10.79-9.648-10.79Zm3.263 11.499H87.861c1.043-2.414 2.79-6.15 6.387-6.15c2.79 0 4.164 1.631 4.164 4.422c-.003.473-.046 1.728-.143 1.728Zm24.591-12.069l.567-4.827h-13.343l-.565 4.827h3.5l-3.782 24.137h-3.505l-.564 4.828h13.34l.57-4.828h-3.503l3.783-24.137h3.502Zm27.11 7.241l1.705-4.827h-4.589l-3.309.683c-1.846-1.18-4.354-2.066-6.717-2.066c-6.768 0-12.537 3.268-12.537 10.697c0 2.084.756 3.766 1.653 4.903c-1.416.755-2.647 2.02-2.647 3.726c0 .756.282 1.53.852 2.238c-2.841 1.706-4.586 4.533-4.586 7.842c0 6.39 6.669 7.753 11.778 7.753c6.433 0 14.099-1.47 14.099-9.655c0-2.79-1.75-4.97-6.812-5.916l-9.13-1.706c-1.04-.191-1.277-.522-1.277-.995c0-.71.43-1.086 1.136-1.086l.616.094c1.23.283 2.65.427 4.115.427c6.578 0 12.443-2.84 12.443-10.22c0-1.042-.188-1.747-.661-2.884c.803.38 1.846.995 2.268.995h1.6v-.003Zm-13.007 19.583c1.796.333 2.41.994 2.41 2.177c0 3.833-4.116 4.306-7.095 4.306c-4.542 0-6.244-1.086-6.244-3.502c0-2.13.613-3.121 2.035-4.637l8.894 1.656ZM135.02 279.5c-2.744 0-4.258-.992-4.258-3.36c0-3.5 2.035-5.535 5.583-5.535c2.839 0 4.212 1.183 4.212 3.498c0 3.502-1.989 5.397-5.537 5.397Zm31.757-13.862c-2.65 0-5.013 1.3-7.948 3.616l-.425-1.772h-5.206l-3.642 26.55h6.292l2.745-20.134c1.846-1.135 4.115-2.783 6.055-2.783c2.364 0 3.218 1.141 3.218 3.316c0 .521-.05 2.064-.145 2.631l-2.315 16.97h6.293l2.315-17.108c.096-.8.19-2.119.19-2.874c.003-4.5-2.129-8.412-7.427-8.412Zm19.38 21.743l.048-.65l2.742-19.249h-10.456l-.659 4.827h4.586c-.379 0-.615.423-.661.804l-1.893 12.82c-.094.617-.14 1.901-.14 2.418c0 3.311 1.796 5.682 5.484 5.682h3.218l.71-4.828h-2.033c-.712 0-.946-1.257-.946-1.824Zm4.067-29.554h-6.15c-.379 0-.379-1.393-.425-.92l-.854 6.802c-.049.428-.049 1.36.33 1.36h6.153c.379 0 .379-1.654.425-2.084l.854-5.25c.048-.473.048.092-.333.092Zm12.831 29.715c-1.559 0-2.317-.663-2.317-2.08l.048-.097l1.987-13.056h7.19l2.175-4.827h-8.704l1.465-10.623l-6.62 2.117l-1.185 8.506h-3.831l-.661 4.827h4.446c-.425 2.414-.852.848-.898 1.323l-1.704 11.448c-.094.522-.094.9-.094 1.371c0 4.495 3.311 6.177 7.289 6.177c3.688 0 6.669-1.077 8.989-3.02l-2.935-3.61c-1.47.897-2.462 1.544-4.64 1.544Zm23.087-21.904c-8.657 0-12.725 4.113-14.098 13.432c-.142 1.137-.237 2.226-.237 3.266c0 6.387 3.264 10.22 10.454 10.22c5.583 0 9.75-2.32 11.97-6.578l-4.777-1.94c-1.37 2.08-3.217 3.5-6.483 3.5c-3.498 0-4.92-.942-4.92-4.065c0-.616.051-1.511.146-1.511h17.077c.236-2.414.52-4.12.52-5.535c0-4.728-1.797-10.79-9.652-10.79Zm3.266 11.499H219c1.04-2.414 2.788-6.15 6.387-6.15c2.79 0 4.164 1.631 4.164 4.422c-.003.473-.049 1.728-.143 1.728Zm23.797-11.5c-2.271 0-4.4 1.302-6.53 3.332l-.378-1.487h-5.202l-3.644 26.55h6.34l2.79-20.56c1.657-.991 3.549-1.838 5.347-1.838c1.137 0 2.223-.181 3.263-.04l.809-5.485c-.951-.189-1.897-.471-2.795-.471ZM92.54 238.81c-14.32-6.19-27.72-21.922-27.752-38.019c-.039-17.55 11.083-32.45 24.916-42.242c-1.663 6.283-2.57 12.03 1.55 17.65c3.83 5.225 10.538 7.764 16.872 6.386c14.8-3.24 15.479-19.51 6.705-28.989c-8.675-9.387-17.067-19.99-13.765-33.603c1.653-6.824 5.843-13.216 11.151-17.785c-4.08 10.722 7.514 21.296 15.153 26.563c13.251 9.138 27.79 16.044 39.974 26.756c12.816 11.258 22.28 26.48 20.369 44.135c-2.071 19.136-17.277 32.445-34.333 39.164c36.042-7.955 73.283-35.928 74.046-75.9c.632-32.885-21.927-58.193-49.872-72.682l-1.46-.797c.767 1.861 1.018 3.444.989 4.861a17 17 0 0 0 .468-3.227a15.728 15.728 0 0 1-.512 3.9l.044-.673a16.383 16.383 0 0 1-2.069 4.931l.41-.441c-5.575 9.247-20.668 11.255-28.124 1.68c-11.986-15.402.251-32.008 1.963-48.318c2.143-20.441-10.676-40.285-26.57-52.16c8.754 14.161-2.779 32.896-12.006 43.37C101.74 53.523 90.859 62 80.982 71.225c-10.61 9.908-20.81 20.345-29.531 31.974c-17.442 23.276-28.12 52.55-20.273 81.588c7.842 29.018 32.978 47.49 61.363 54.022Z" />
+                            </svg>
+                            <img src="/assets/laravel.svg" class="-hue-rotate-160 w-32 h-32 fill-blue-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="px-36 pt-20 pb-36" id="portfolio">
+            <div class="pb-8">
+                <h2 class="text-5xl font-bold text-blue-500">Portfolio</h2>
+                <p class="text-blue-500 pt-6">Here's what i've done.</p>
+                <p class="text-blue-500 pt-3">Or you can check my other project from the link below.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-20">
+                <div class="w-72 h-96 mx-auto border-2 border-blue-500 bg-blue-200">
+                    <div class="w-full h-1/2 border-b-2 border-blue-500"></div>
+                    <div class="p-6">
+                        <h1 class="text-blue-500 text-lg font-bold">Project Name</h2>
+                            <p class="text-blue-500 mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Facilis, mollitia.</p>
+                    </div>
+                </div>
+                <div class="w-72 h-96 mx-auto border-2 border-blue-500 bg-blue-200">
+                    <div class="w-full h-1/2 border-b-2 border-blue-500"></div>
+                    <div class="p-6">
+                        <h1 class="text-blue-500 text-lg font-bold">Project Name</h2>
+                            <p class="text-blue-500 mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Facilis, mollitia.</p>
+                    </div>
+                </div>
+                <div class="w-72 h-96 border-2 border-blue-500 bg-blue-200">
+                    <div class="w-full h-1/2 border-b-2 border-blue-500"></div>
+                    <div class="p-6">
+                        <h1 class="text-blue-500 text-lg font-bold">Project Name</h2>
+                            <p class="text-blue-500 mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Facilis, mollitia.</p>
+                    </div>
+                </div>
+                <div class="w-72 h-96 border-2 border-blue-500 bg-blue-200">
+                    <div class="w-full h-1/2 border-b-2 border-blue-500"></div>
+                    <div class="p-6">
+                        <h1 class="text-blue-500 text-lg font-bold">Project Name</h2>
+                            <p class="text-blue-500 mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Facilis, mollitia.</p>
+                    </div>
+                </div>
+                <div class="w-72 h-96 mx-auto border-2 border-blue-500 bg-blue-200">
+                    <div class="w-full h-1/2 border-b-2 border-blue-500"></div>
+                    <div class="p-6">
+                        <h1 class="text-blue-500 text-lg font-bold">Project Name</h2>
+                            <p class="text-blue-500 mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Facilis, mollitia.</p>
+                    </div>
+                </div>
+                <div class="w-72 h-96 mx-auto border-2 border-blue-500 bg-blue-200">
+                    <div class="w-full h-1/2 border-b-2 border-blue-500"></div>
+                    <div class="p-6">
+                        <h1 class="text-blue-500 text-lg font-bold">Project Name</h2>
+                            <p class="text-blue-500 mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Facilis, mollitia.</p>
+                    </div>
+                </div>
+                <div class="w-72 h-96 border-2 mx-64 border-blue-500 bg-blue-200">
+                    <div class="w-full h-1/2 border-b-2 border-blue-500"></div>
+                    <div class="p-6">
+                        <h1 class="text-blue-500 text-lg font-bold">Project Name</h2>
+                            <p class="text-blue-500 mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Facilis, mollitia.</p>
+                    </div>
+                </div>
+                <div class="w-72 h-96 border-2 mx-64 border-blue-500 bg-blue-200">
+                    <div class="w-full h-1/2 border-b-2 border-blue-500"></div>
+                    <div class="p-6">
+                        <h1 class="text-blue-500 text-lg font-bold">Project Name</h2>
+                            <p class="text-blue-500 mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Facilis, mollitia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-y-2 border-blue-500">
+            <div class="w-4/5 h-96 mx-auto px-52 bg-blue-500">
+                <div class="pt-24 px-32">
+                    <h2 class="text-4xl font-extrabold text-blue-200 text-center">Let's jump on a quick call</h2>
+                    <p class="pt-4 text-blue-200 text-center">
+                        Ask me any questions you might have or just drop me a message to say hello :)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full h-20 py-6">
+            <p class="text-blue-500 text-center">Copyright © 2021 adityanurhuda.com</p>
+        </div>
+
+    </main>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+            // Optional parameters
+            slidesPerView: 4,
+            direction: 'vertical',
+            loop: true,
+            freeMode: true,
+
+            speed: 2750,
+
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+            },
+
+            pagination: {
+                clickable: true,
+            },
+
+        });
+    </script>
+
+</body>
+
+</html>
