@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
@@ -28,21 +28,21 @@
         <div class="py-4 px-3 rounded align-middle">
             <ul class="space-y-2">
                 <li>
-                    <a href="#"
+                    <a href="/about-me.html"
                         class="group flex items-center p-2 text-xl font-normal transform hover:translate-x-6 transition text-blue-500 rounded-lg">
                         <span class="hidden group-hover:block">-</span>
                         <span class="ml-3">About me</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="#portfolio"
                         class="group flex items-center p-2 text-xl font-normal transform hover:translate-x-6 transition text-blue-500 rounded-lg">
                         <span class="hidden group-hover:block">-</span>
                         <span class="ml-3">Portfolio</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#"
+                    <a href="#contact"
                         class="group flex items-center p-2 text-xl font-normal transform hover:translate-x-6 transition text-blue-500 rounded-lg">
                         <span class="hidden group-hover:block">-</span>
                         <span class="ml-3">Contact</span>
@@ -50,19 +50,22 @@
                 </li>
             </ul>
             <ul class="absolute bottom-4 right-4 text-2xl text-blue-500">
-                <li><a href="#"><i class="fa-brands fa-linkedin transition hover:scale-150"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-instagram transition hover:scale-150"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-twitter transition hover:scale-150"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/adityanh/" target="_blank"><i
+                            class="fa-brands fa-linkedin transition hover:scale-150"></i></a></li>
+                <li><a href="https://www.instagram.com/adityaanh/" target="_blank"><i
+                            class="fa-brands fa-instagram transition hover:scale-150"></i></a></li>
+                <li><a href="https://twitter.com/adityanhh" target="_blank"><i
+                            class="fa-brands fa-twitter transition hover:scale-150"></i></a></li>
             </ul>
         </div>
     </nav>
 
     <nav class="fixed w-full z-10 bg-blue-200 border-blue-500 border-b-2 pl-32 rounded dark:bg-gray-800">
         <div class="container flex justify-between">
-            <a href="https://flowbite.com" class="flex items-center">
+            <a href="#" class="flex items-center">
                 <span class="self-center text-xl whitespace-nowrap text-blue-500">Aditya Nur Huda</span>
             </a>
-            <a href="#" class="bg-blue-500 p-6 text-blue-200 hover:bg-blue-300">
+            <a href="#contact" class="bg-blue-500 p-6 text-blue-200 hover:bg-blue-300">
                 Contact
             </a>
         </div>
@@ -86,7 +89,7 @@
                         You can check more about me from the link below.
                     </p>
                     <div class="pt-4 transform transition hover:translate-x-2">
-                        <a href="#" class="text-lg text-blue-500 font-semibold underline">MORE ABOUT ME <i
+                        <a href="/about-me.html" class="text-lg text-blue-500 font-semibold underline">MORE ABOUT ME <i
                                 class="fa-solid fa-arrow-up-right-from-square"></i></a href="#">
                     </div>
                 </div>
@@ -204,7 +207,12 @@
             <div class="pb-8">
                 <h2 class="text-5xl font-bold text-blue-500">Portfolio</h2>
                 <p class="text-blue-500 pt-6">Here's what i've done.</p>
-                <p class="text-blue-500 pt-3">Or you can check my other project from the link below.</p>
+                <p class="text-blue-500 pt-3">You can also check more visual gallery with a variety of different
+                    projects from the link below.</p>
+                <div class="pt-4 transform transition hover:translate-x-2">
+                    <a href="/gallery.html" class="text-lg text-blue-500 font-semibold underline">GALLERY <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a href="#">
+                </div>
             </div>
             <div class="grid grid-cols-2 gap-20">
                 <div class="w-96 h-96 mx-auto border-2 border-blue-500 bg-blue-200">
@@ -409,7 +417,7 @@
             </div>
         </div>
 
-        <div class="border-y-2 border-blue-500">
+        <div class="border-y-2 border-blue-500" id="contact">
             <div class="w-4/5 h-96 mx-auto px-52 bg-blue-500">
                 <div class="pt-24 px-32">
                     <h2 class="text-4xl font-extrabold text-blue-200 text-center">Let's jump on a quick call</h2>
@@ -417,7 +425,9 @@
                         Ask me any questions you might have or just drop me a message to say hello :)
                     </p>
                     <div class="mt-6 text-center">
-                        <button class="p-4 border-2 border-blue-200 text-blue-200 transition hover:bg-blue-200 hover:text-blue-500">SEND EMAIL</button>
+                        <button
+                            class="p-4 border-2 border-blue-200 text-blue-200 transition hover:bg-blue-200 hover:text-blue-500">SEND
+                            EMAIL</button>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link href="dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<!-- :class="{'translate-x-22': sidebarOpen === true, '-translate-x-44': sidebarOpen === false}" -->
+
+<body class="bg-blue-200" x-data="{ sidebarOpen: false }">
+
+    <div class="fixed top-2 left-5 z-30 transform-none">
+        <button @click="sidebarOpen = !sidebarOpen" class="text-blue-500 text-3xl">
+            <i :class="{'fa-solid fa-x': sidebarOpen === true, 'fa-solid fa-bars': sidebarOpen === false}"></i>
+        </button>
+    </div>
+    <nav :class="{'translate-x-22': sidebarOpen === true, '-translate-x-44': sidebarOpen === false}"
+        class="w-60 z-20 fixed bg-blue-200 border-blue-500 border-r-2 transform transition duration-30 flex items-center h-screen"
+        aria-label="Sidebar">
+        <div class="py-4 px-3 rounded align-middle">
+            <ul class="space-y-2">
+                <li>
+                    <a href="/about-me.html"
+                        class="group flex items-center p-2 text-xl font-normal transform hover:translate-x-6 transition text-blue-500 rounded-lg">
+                        <span class="hidden group-hover:block">-</span>
+                        <span class="ml-3">About me</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index.html#portfolio"
+                        class="group flex items-center p-2 text-xl font-normal transform hover:translate-x-6 transition text-blue-500 rounded-lg">
+                        <span class="hidden group-hover:block">-</span>
+                        <span class="ml-3">Portfolio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index.html#contact"
+                        class="group flex items-center p-2 text-xl font-normal transform hover:translate-x-6 transition text-blue-500 rounded-lg">
+                        <span class="hidden group-hover:block">-</span>
+                        <span class="ml-3">Contact</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="absolute bottom-4 right-4 text-2xl text-blue-500">
+                <li><a href="https://www.linkedin.com/in/adityanh/" target="_blank"><i
+                            class="fa-brands fa-linkedin transition hover:scale-150"></i></a></li>
+                <li><a href="https://www.instagram.com/adityaanh/" target="_blank"><i
+                            class="fa-brands fa-instagram transition hover:scale-150"></i></a></li>
+                <li><a href="https://twitter.com/adityanhh" target="_blank"><i
+                            class="fa-brands fa-twitter transition hover:scale-150"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="fixed w-full z-10 bg-blue-200 border-blue-500 border-b-2 pl-32 rounded dark:bg-gray-800">
+        <div class="container flex justify-between">
+            <a href="/index.html" class="flex items-center">
+                <span class="self-center text-xl whitespace-nowrap text-blue-500">Aditya Nur Huda</span>
+            </a>
+            <a href="/index.html#contact" class="bg-blue-500 p-6 text-blue-200 hover:bg-blue-300">
+                Contact
+            </a>
+        </div>
+    </nav>
+
+    <main class="pt-16">
+
+        <div class="flex pl-12 border-b-2 border-blue-500">
+            <div class="h-96 border-r-2 border-blue-500">
+                <img class="w-full h-full" src="/assets/foto.jpg" alt="">
+            </div>
+            <div class="w-3/5 p-16">
+                <h1 class="text-5xl text-blue-500 font-black">A little bit about me</h1>
+                <p class="text-blue-500 pt-4">
+                    My name is Aditya Nur Huda, Vocational High School 11 Bandung City
+                    Software Engineering graduate.
+                </p>
+                <p class="text-blue-500 pt-6">
+                    I'm interested in Information Technology World since i was in primary school. When i was playing a
+                    game, i was wondering how they make this awesome game. I am very ambitious to take an important role
+                    in this industrial 4.0 era. I will never stop learning no matter what problems I will face in future days.
+                </p>
+            </div>
+        </div>
+
+        <div class="w-full h-20 py-6">
+            <p class="text-blue-500 text-center">Copyright © 2021 adityanh.netlify.app</p>
+        </div>
+
+    </main>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+</body>
+
+</html>
