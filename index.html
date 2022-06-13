@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aditya Nur Huda's Portfolio</title>
     <link href="dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/tailwind.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -77,18 +78,22 @@
 
             <div class="w-full pl-36 pt-16 pr-36 border-r-2 border-blue-500 pb-16">
                 <div class="w-60">
-                    <h2 class="text-7xl font-black text-blue-500">Junior <span
+                    <h2 class="text-7xl font-black text-blue-500 opacity-0 translate-x-3/4 transition duration-700"
+                        x-intersect="$el.classList.add('opacity-100', 'translate-x-0')">Junior <span
                             class="text-blue-200 drop-shadow-2lg z-0">Software Engineer</span></h2>
                 </div>
                 <div class="max-w-xl pt-12">
-                    <p class="text-blue-500">
+                    <p class="text-blue-500 opacity-0 ease-in-out duration-2000"
+                        x-intersect="$el.classList.add('opacity-100')">
                         I develop games, android apps & website for any kind of purposes.
                         Interested in the limitless world of technology that can benefit mankind.
                     </p>
-                    <p class="text-blue-500 pt-5">
+                    <p class="text-blue-500 pt-5 opacity-0 ease-in-out duration-2000"
+                        x-intersect="$el.classList.add('opacity-100')">
                         You can check more about me from the link below.
                     </p>
-                    <div class="pt-4 transform transition hover:translate-x-2">
+                    <div class="pt-4 transform transition hover:translate-x-2 opacity-0 ease-in-out duration-5000"
+                        x-intersect="$el.classList.add('opacity-100')">
                         <a href="/about-me.html" class="text-lg text-blue-500 font-semibold underline">MORE ABOUT ME <i
                                 class="fa-solid fa-arrow-up-right-from-square"></i></a href="#">
                     </div>
@@ -203,19 +208,27 @@
 
         </div>
 
-        <div class="px-36 pt-20 pb-20" id="portfolio">
+        <div class="px-36 pt-20 pb-20 overflow-hidden" id="portfolio">
             <div class="pb-8">
-                <h2 class="text-5xl font-bold text-blue-500">Portfolio</h2>
-                <p class="text-blue-500 pt-6">Here's what i've done.</p>
-                <p class="text-blue-500 pt-3">You can also check more visual gallery with a variety of different
-                    projects from the link below.</p>
-                <div class="pt-4 transform transition hover:translate-x-2">
+                <h2 class="text-5xl font-bold text-blue-500 opacity-0 translate-y-3/4 transition duration-700"
+                    x-intersect="$el.classList.add('opacity-100', 'translate-y-0')">Portfolio</h2>
+                <p class="text-blue-500 pt-6 opacity-0 ease-in-out duration-2000"
+                    x-intersect="$el.classList.add('opacity-100')">Here's what i've done.</p>
+                <p class="text-blue-500 pt-3 opacity-0 ease-in-out duration-2000"
+                    x-intersect="$el.classList.add('opacity-100')">
+                    You can also check more visual gallery with a variety
+                    of different
+                    projects from the link below.
+                </p>
+                <div class="pt-4 transform transition hover:translate-x-2 opacity-0 ease-in-out duration-5000"
+                    x-intersect="$el.classList.add('opacity-100')">
                     <a href="/gallery.html" class="text-lg text-blue-500 font-semibold underline">GALLERY <i
                             class="fa-solid fa-arrow-up-right-from-square"></i></a href="#">
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-20">
-                <div class="w-96 h-96 mx-auto border-2 border-blue-500 bg-blue-200">
+                <div class="w-96 h-96 mx-auto border-2 border-blue-500 bg-blue-200 "
+                    x-intersect="$el.classList.add('swing-right-bck')">
                     <div class="w-full h-1/2 border-b-2 border-blue-500">
                         <div class="p-3 h-full transition hover:scale-105">
                             <a href="#" class="project-image cursor-pointer transition hover:scale-105">
@@ -232,7 +245,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-96 h-96 mt-16 mx-auto border-2 border-blue-500 bg-blue-200">
+                <div class="w-96 h-96 mt-16 mx-auto border-2 border-blue-500 bg-blue-200"
+                    x-intersect="$el.classList.add('swing-right-bck')">
                     <div class="w-full h-1/2 border-b-2 border-blue-500">
                         <div class="p-3 h-full transition hover:scale-105">
                             <a href="#" class="project-image cursor-pointer transition hover:scale-105">
@@ -250,7 +264,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-96 h-96 mx-auto border-2 border-blue-500 bg-blue-200">
+                <div class="w-96 h-96 mx-auto border-2 border-blue-500 bg-blue-200"
+                    x-intersect="$el.classList.add('swing-right-bck')">
                     <div class="w-full h-1/2 border-b-2 border-blue-500">
                         <div class="p-3 h-full transition hover:scale-105">
                             <a href="#" class="project-image cursor-pointer transition hover:scale-105">
@@ -266,7 +281,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-96 h-96 mt-16 mx-auto border-2 border-blue-500 bg-blue-200">
+                <div class="w-96 h-96 mt-16 mx-auto border-2 border-blue-500 bg-blue-200"
+                    x-intersect="$el.classList.add('swing-right-bck')">
                     <div class="w-full h-1/2 border-b-2 border-blue-500">
                         <div class="p-3 h-full transition hover:scale-105">
                             <a href="#" class="project-image cursor-pointer transition hover:scale-105">
@@ -281,7 +297,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-96 h-96 mx-auto border-2 border-blue-500 bg-blue-200">
+                <div class="w-96 h-96 mx-auto border-2 border-blue-500 bg-blue-200"
+                    x-intersect="$el.classList.add('swing-right-bck')">
                     <div class="w-full h-1/2 border-b-2 border-blue-500">
                         <div class="p-3 h-full transition hover:scale-105">
                             <a href="#" class="project-image cursor-pointer transition hover:scale-105">
@@ -296,7 +313,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-96 h-96 mt-16 mx-auto border-2 border-blue-500 bg-blue-200">
+                <div class="w-96 h-96 mt-16 mx-auto border-2 border-blue-500 bg-blue-200"
+                    x-intersect="$el.classList.add('swing-right-bck')">
                     <div class="w-full h-1/2 border-b-2 border-blue-500">
                         <div class="p-3 h-full transition hover:scale-105">
                             <a href="#" class="project-image cursor-pointer transition hover:scale-105">
@@ -311,7 +329,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-96 h-96 mx-auto border-2 border-blue-500 bg-blue-200">
+                <div class="w-96 h-96 mx-auto border-2 border-blue-500 bg-blue-200"
+                    x-intersect="$el.classList.add('swing-right-bck')">
                     <div class="w-full h-1/2 border-b-2 border-blue-500">
                         <div class="p-3 h-full transition hover:scale-105">
                             <a href="#" class="project-image cursor-pointer transition hover:scale-105">
@@ -328,7 +347,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="w-96 h-96 mt-16 mx-auto border-2 border-blue-500 bg-blue-200">
+                <div class="w-96 h-96 mt-16 mx-auto border-2 border-blue-500 bg-blue-200"
+                    x-intersect="$el.classList.add('swing-right-bck')">
                     <div class="w-full h-1/2 border-b-2 border-blue-500">
                         <div class="p-3 h-full transition hover:scale-105">
                             <a href="#" class="project-image cursor-pointer transition hover:scale-105">
@@ -350,7 +370,8 @@
         <div class="pb-12 px-20">
 
             <div class="pb-12">
-                <h2 class="text-5xl text-center font-bold underline text-blue-500">Other Projects</h2>
+                <h2 class="text-5xl text-center font-bold underline text-blue-500 opacity-0 translate-y-3/4 transition duration-700"
+                    x-intersect="$el.classList.add('opacity-100', 'translate-y-0')">Other Projects</h2>
             </div>
 
             <div class="swiper mySwiper2">
@@ -420,11 +441,13 @@
         <div class="border-y-2 border-blue-500" id="contact">
             <div class="w-4/5 h-96 mx-auto px-52 bg-blue-500">
                 <div class="pt-24 px-32">
-                    <h2 class="text-4xl font-extrabold text-blue-200 text-center">Let's jump on a quick call</h2>
-                    <p class="pt-4 text-blue-200 text-center">
+                    <h2 class="text-4xl font-extrabold text-blue-200 text-center opacity-0 translate-x-3/4 transition duration-700"
+                        x-intersect="$el.classList.add('opacity-100', 'translate-x-0')">Let's jump on a quick call</h2>
+                    <p class="pt-4 text-blue-200 text-center opacity-0 ease-in-out duration-2000"
+                        x-intersect="$el.classList.add('opacity-100')">
                         Ask me any questions you might have or just drop me a message to say hello :)
                     </p>
-                    <div class="mt-6 text-center">
+                    <div class="mt-6 text-center" x-intersect="$el.classList.add('scale-down-center')">
                         <button
                             class="p-4 border-2 border-blue-200 text-blue-200 transition hover:bg-blue-200 hover:text-blue-500">SEND
                             EMAIL</button>
@@ -438,6 +461,9 @@
         </div>
 
     </main>
+
+    <!-- Alpine Plugins -->
+    <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 
     <script src="//unpkg.com/alpinejs" defer></script>
     <!-- Swiper JS -->

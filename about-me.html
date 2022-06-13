@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me</title>
     <link href="dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/tailwind.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -71,22 +72,28 @@
         </div>
     </nav>
 
-    <main class="pt-16">
+    <main class="pt-16 max-w-full">
 
         <div class="flex pl-12 border-b-2 border-blue-500">
             <div class="h-96 border-r-2 border-blue-500">
                 <img class="w-full h-full" src="/assets/foto.jpg" alt="">
             </div>
-            <div class="w-3/5 p-16">
-                <h1 class="text-5xl text-blue-500 font-black">A little bit about me</h1>
-                <p class="text-blue-500 pt-4">
+            <div class="w-3/5 p-16 overflow-hidden">
+                <h1 class="text-5xl text-blue-500 font-black opacity-0 translate-x-3/4 transition duration-700"
+                    x-intersect="$el.classList.add('opacity-100', 'translate-x-0')">
+                    A little bit about me
+                </h1>
+                <p class="text-blue-500 pt-4 opacity-0 ease-in-out duration-2000"
+                    x-intersect="$el.classList.add('opacity-100')">
                     My name is Aditya Nur Huda, Vocational High School 11 Bandung City
                     Software Engineering graduate.
                 </p>
-                <p class="text-blue-500 pt-6">
+                <p class="text-blue-500 pt-6 opacity-0 ease-in-out duration-3000"
+                    x-intersect="$el.classList.add('opacity-100')">
                     I'm interested in Information Technology World since i was in primary school. When i was playing a
                     game, i was wondering how they make this awesome game. I am very ambitious to take an important role
-                    in this industrial 4.0 era. I will never stop learning no matter what problems I will face in future days.
+                    in this industrial 4.0 era. I will never stop learning no matter what problems I will face in future
+                    days.
                 </p>
             </div>
         </div>
@@ -96,6 +103,9 @@
         </div>
 
     </main>
+
+    <!-- Alpine Plugins -->
+    <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 
     <script src="//unpkg.com/alpinejs" defer></script>
     <!-- Swiper JS -->

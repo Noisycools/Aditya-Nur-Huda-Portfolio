@@ -20,7 +20,14 @@ module.exports = {
       },
       width: {
         '540': '540px',
-      }
+      },
+      transitionDuration: {
+        '0': '0ms',
+        '2000': '2000ms',
+        '2500': '2500ms',
+        '3000': '3000ms',
+        '5000': '5000ms',
+      },
     },
   },
   plugins: [],
