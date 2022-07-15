@@ -18,13 +18,14 @@
 
 <body class="bg-blue-200" x-data="{ sidebarOpen: false }">
 
-    <div class="fixed top-2 left-5 z-40 transform-none">
+    <div class="hidden sm:block fixed top-2 left-5 z-30 transform-none">
         <button @click="sidebarOpen = !sidebarOpen" class="text-blue-500 text-3xl">
             <i :class="{'fa-solid fa-x': sidebarOpen === true, 'fa-solid fa-bars': sidebarOpen === false}"></i>
         </button>
     </div>
-    <nav :class="{'translate-x-22': sidebarOpen === true, '-translate-x-44': sidebarOpen === false}"
-        class="w-60 z-30 fixed bg-blue-200 border-blue-500 border-r-2 transform -translate-x-44 transition duration-30 flex items-center h-screen"
+
+    <nav :class="{'translate-x-22': sidebarOpen === true, '-translate-x-60 md:-translate-x-44': sidebarOpen === false}"
+        class="w-60 z-20 fixed bg-blue-200 border-blue-500 border-r-2 transform -translate-x-60 transition duration-30 flex items-center h-screen"
         aria-label="Sidebar">
         <div class="py-4 px-3 rounded align-middle">
             <ul class="space-y-2">
@@ -36,14 +37,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/index.html#portfolio"
+                    <a href="index.html#portfolio"
                         class="group flex items-center p-2 text-xl font-normal transform hover:translate-x-6 transition text-blue-500 rounded-lg">
                         <span class="hidden group-hover:block">-</span>
                         <span class="ml-3">Portfolio</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/index.html#contact"
+                    <a href="index.html#contact"
                         class="group flex items-center p-2 text-xl font-normal transform hover:translate-x-6 transition text-blue-500 rounded-lg">
                         <span class="hidden group-hover:block">-</span>
                         <span class="ml-3">Contact</span>
@@ -61,121 +62,133 @@
         </div>
     </nav>
 
-    <nav class="fixed w-full z-10 bg-blue-200 border-blue-500 border-b-2 pl-32 rounded dark:bg-gray-800">
+    <nav class="fixed w-full z-10 bg-blue-200 border-blue-500 border-b-2 pl-6 md:pl-32 rounded dark:bg-gray-800">
         <div class="container flex justify-between">
-            <a href="/index.html" class="flex items-center">
+            <a href="index.html" class="py-6 md:py-6 flex items-center">
                 <span class="self-center text-xl whitespace-nowrap text-blue-500">Aditya Nur Huda</span>
             </a>
-            <a href="/index.html#contact" class="bg-blue-500 p-6 text-blue-200 hover:bg-blue-300">
+            <button @click="sidebarOpen = !sidebarOpen" class="block mr-6 md:hidden text-blue-500 text-3xl">
+                <i :class="{'fa-solid fa-x': sidebarOpen === true, 'fa-solid fa-bars': sidebarOpen === false}"></i>
+            </button>
+            <a href="#contact" class="hidden sm:block bg-blue-500 p-6 text-blue-200 hover:bg-blue-300">
                 Contact
             </a>
         </div>
     </nav>
 
-    <main class="pt-16">
+    <main class="pt-16 overflow-hidden">
 
-        <div class="flex justify-end pr-24 pt-24 z-10">
+        <div class="md:flex md:justify-end md:pr-24 md:pt-24 z-10">
             <img src="/assets/gallery.jpg" alt="">
-            <div class="absolute -bottom-6 left-48">
-                <div class="w-540 p-8 border-2 border-blue-500 bg-blue-200 z-20">
-                    <div class="w-96">
-                        <h1 class="text-5xl text-blue-500 font-black">Check out more of my projects below</h1>
+            <div class="md:absolute md:-bottom-6 md:left-48">
+                <div class="w-full md:w-540 p-8 border-b-2 md:border-2 border-blue-500 bg-blue-200 z-20">
+                    <div class="md:w-96">
+                        <h1 class="text-4xl md:text-5xl text-blue-500 font-black">Check out more of my projects below</h1>
                     </div>
                     <p class="text-blue-500 pt-6">Here is a visual gallery with a mix of different projects</p>
                 </div>
             </div>
         </div>
 
-        <div class="pt-44 pl-40 pb-24">
-            <div class="grid grid-cols-2">
+        <div class="p-8 max-w-full md:pt-44 md:pl-32 md:pb-24">
+            <div class="flex flex-wrap md:justify-evenly">
                 <!-- AMC -->
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/amc/ss2.png" alt="">
                 </div>
                 <!-- Car -->
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/car/1.png" alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
-                    <img class="w-full h-full" src="/assets/projects/car/WhatsApp Image 2022-06-08 at 21.32.06.jpeg" alt="">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
+                    <img class="w-full h-full" src="/assets/projects/car/WhatsApp Image 2022-06-08 at 21.32.06.jpeg"
+                        alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/car/ss.png" alt="">
                 </div>
                 <!-- Warungin -->
-                <div class="col-span-2 mb-12 max-w-1136 h-96 rounded-xl bg-blue-500 overflow-hidden">
-                    <img class="w-full h-full" src="/assets/projects/warungin/Screenshot from 2022-06-11 23-03-27.png" alt="">
+                <div class="mb-12 max-w-1136 md:h-96 rounded-xl bg-blue-500 overflow-hidden">
+                    <img class="w-full h-full" src="/assets/projects/warungin/Screenshot from 2022-06-11 23-03-27.png"
+                        alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
-                    <img class="w-full h-full" src="/assets/projects/warungin/Screenshot from 2022-06-11 23-07-53.png" alt="">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
+                    <img class="w-full h-full" src="/assets/projects/warungin/Screenshot from 2022-06-11 23-07-53.png"
+                        alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
-                    <img class="w-full h-full" src="/assets/projects/warungin/Screenshot from 2022-06-11 23-11-31.png" alt="">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
+                    <img class="w-full h-full" src="/assets/projects/warungin/Screenshot from 2022-06-11 23-11-31.png"
+                        alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
-                    <img class="w-full h-full" src="/assets/projects/warungin/Screenshot from 2022-06-11 23-13-34.png" alt="">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
+                    <img class="w-full h-full" src="/assets/projects/warungin/Screenshot from 2022-06-11 23-13-34.png"
+                        alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
-                    <img class="w-full h-full" src="/assets/projects/warungin/screencapture-localhost-8080-pages-detail-histori-transaksi-wr-799289-2022-06-11-23_15_28.png" alt="">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
+                    <img class="w-full h-full"
+                        src="/assets/projects/warungin/screencapture-localhost-8080-pages-detail-histori-transaksi-wr-799289-2022-06-11-23_15_28.png"
+                        alt="">
                 </div>
                 <!-- FAC -->
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/fac/1.jpg" alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/fac/2.jpg" alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/fac/3.jpg" alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/fac/4.jpg" alt="">
                 </div>
                 <!-- JDBC -->
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/jdbc/1.png" alt="">
                 </div>
                 <!-- Nationalist -->
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/nationalist/1.png" alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/nationalist/2.png" alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/nationalist/3.png" alt="">
                 </div>
                 <!-- Odading -->
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/odading/1.png" alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/odading/2.png" alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/odading/3.png" alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/odading/4.png" alt="">
                 </div>
                 <!-- Signal -->
-                <div class="col-span-2 mb-12 max-w-1136 h-96 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="mb-12 max-w-1136 md:h-96 rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/signal/Disc.png" alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/signal/1.jpg" alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
-                    <img class="w-full h-full" src="/assets/projects/signal/144037194_716782538840966_2006112263493656696_n.jpg" alt="">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
+                    <img class="w-full h-full"
+                        src="/assets/projects/signal/144037194_716782538840966_2006112263493656696_n.jpg" alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
-                    <img class="w-full h-full" src="/assets/projects/signal/144335708_253565952807963_8052873185189826440_n.jpg" alt="">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
+                    <img class="w-full h-full"
+                        src="/assets/projects/signal/144335708_253565952807963_8052873185189826440_n.jpg" alt="">
                 </div>
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/signal/jZpseZ.png" alt="">
                 </div>
                 <!-- Traveloki -->
-                <div class="w-540 mb-12 h-80 rounded-xl bg-blue-500 overflow-hidden">
+                <div class="md:w-540 mb-12 h-full rounded-xl bg-blue-500 overflow-hidden">
                     <img class="w-full h-full" src="/assets/projects/traveloki/ss2.png" alt="">
                 </div>
             </div>
